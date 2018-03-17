@@ -63,7 +63,7 @@ public class Board {
                 cc = new Circle(i * 100 + 55, j * 100 + 55, 90, 90);
                 gameGrid[i][j] = cc;
             }
-	}
+	    }
     }
 
     /**
@@ -75,7 +75,6 @@ public class Board {
             game.setGameIsOver(true);
             return true;
         }
-
         return false;
     }
 
@@ -218,6 +217,26 @@ public class Board {
             //of BoardDisplay, doesn't work otherwise
         }
 
+        @Override
+        public void mousePressed(MouseEvent e) {
+            
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+
         /**
          * Method for making an AI move on advanced difficulty
          */
@@ -353,7 +372,8 @@ public class Board {
             //set the selected circle's state to current player's color
             if (game.getTurn() == 1) {
                 gameGrid[xIndex][yIndex].setState(game.getPlayer1Color());
-            } else if (game.getTurn() == 2) {
+            }
+            else if (game.getTurn() == 2) {
                 gameGrid[xIndex][yIndex].setState(game.getPlayer2Color());
             }
             display.repaint();
@@ -373,41 +393,6 @@ public class Board {
             ++drawCounter;
         }
 
-        public void mouseEntered(MouseEvent e) {
-            // TODO Auto-generated method stub
-
-        }
-
-        /**
-         * mouseExited is a function in the MouseListener interface
-         *
-         * @param e represents the mouseEvent
-         */
-
-        public void mouseExited(MouseEvent e) {
-            // TODO Auto-generated method stub
-
-        }
-
-        /**
-         * mousePressed is a function in the MouseListener interface
-         *
-         * @param e represents the mouseEvent
-         */
-
-        public void mousePressed(MouseEvent e) {
-            //TODO Auto-generated method stub
-        }
-
-        /**
-         * mouseReleased is a function in the MouseListener interface
-         *
-         * @param e represents the mouseEvent
-         */
-
-        public void mouseReleased(MouseEvent e) {
-            // TODO Auto-generated method stub
-        }
 
 
     }
